@@ -44,6 +44,10 @@ defmodule Rayex.Shapes do
   @spec draw_rectangle_lines_ex(S.Rectangle.t(), integer(), S.Color.t()) :: :ok
   defdelegate draw_rectangle_lines_ex(rectangle, line_thick, color), to: Raylib
 
+  @doc "Draw rectangle with rounded edges"
+  @spec draw_rectangle_rounded(S.Rectangle.t(), float(), integer(), S.Color.t()) :: :ok
+  defdelegate draw_rectangle_rounded(rectangle, roundness, segments, color), to: Raylib
+
   @doc "Draw a color-filled triangle (vertex in counter-clockwise order!)"
   @spec draw_triangle(S.Vector2.t(), S.Vector2.t(), S.Vector2.t(), S.Color.t()) :: :ok
   defdelegate draw_triangle(vertice1, vertice2, vertice3, color), to: Raylib

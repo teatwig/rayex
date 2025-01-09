@@ -375,6 +375,11 @@ UNIFEX_TERM draw_rectangle_lines_ex(UnifexEnv *env, rectangle r, int line_thick,
   return draw_rectangle_lines_ex_result_ok(env);
 }
 
+UNIFEX_TERM draw_rectangle_rounded(UnifexEnv *env, rectangle r, double roundness, int segments, color c) {
+  DrawRectangleRounded(RECTANGLE(r), roundness, segments, COLOR(c));
+  return draw_rectangle_rounded_result_ok(env);
+}
+
 UNIFEX_TERM draw_triangle(UnifexEnv *env, vector2 v1, vector2 v2, vector2 v3,
                           color c) {
   DrawTriangle(VECTOR2(v1), VECTOR2(v2), VECTOR2(v3), COLOR(c));

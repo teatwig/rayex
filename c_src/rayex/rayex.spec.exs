@@ -149,6 +149,10 @@ spec draw_rectangle_pro(rec :: rectangle, origin :: vector2, rotation :: float, 
        :ok :: label
 
 spec draw_rectangle_lines_ex(rec :: rectangle, line_thick :: int, color :: color) :: :ok :: label
+
+spec draw_rectangle_rounded(rec :: rectangle, roundness :: float, segments :: int, color :: color) ::
+       :ok :: label
+
 spec draw_triangle(v1 :: vector2, v2 :: vector2, v3 :: vector2, color :: color) :: :ok :: label
 
 spec draw_poly(

@@ -171,6 +171,12 @@ spec check_collision_circles(
        radius2 :: float
      ) :: result :: bool
 
+spec check_collision_circle_rec(
+       center :: vector2,
+       radius :: float,
+       rec :: rectangle
+     ) :: result :: bool
+
 spec check_collision_point_rec(point :: vector2, rec :: rectangle) :: result :: bool
 spec get_ray_collision_box(ray :: ray, box :: bounding_box) :: ray_collision :: ray_collision
 

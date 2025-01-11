@@ -62,6 +62,10 @@ defmodule Rayex.Shapes do
   @spec check_collision_circles(S.Vector2.t(), float(), S.Vector2.t(), float()) :: boolean()
   defdelegate check_collision_circles(center1, radius1, center2, radius2), to: Raylib
 
+  @doc "Check collision between circle and rectangle"
+  @spec check_collision_circle_rec(S.Vector2.t(), float(), S.Rectangle.t()) :: boolean()
+  defdelegate check_collision_circle_rec(center, radius, rectangle), to: Raylib
+
   @doc "Check if point is inside rectangle"
   @spec check_collision_point_rec(S.Vector2.t(), S.Rectangle.t()) :: boolean()
   defdelegate check_collision_point_rec(point, rectangle), to: Raylib

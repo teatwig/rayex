@@ -398,6 +398,11 @@ UNIFEX_TERM check_collision_circles(UnifexEnv *env, vector2 c1, double r1, vecto
   return check_collision_circles_result(env, res);
 }
 
+UNIFEX_TERM check_collision_circle_rec(UnifexEnv *env, vector2 c, double r, rectangle rec) {
+  bool res = CheckCollisionCircleRec(VECTOR2(c), r, RECTANGLE(rec));
+  return check_collision_circle_rec_result(env, res);
+}
+
 UNIFEX_TERM check_collision_point_rec(UnifexEnv *env, vector2 p, rectangle r) {
   bool res = CheckCollisionPointRec(VECTOR2(p), RECTANGLE(r));
   return check_collision_point_rec_result(env, res);

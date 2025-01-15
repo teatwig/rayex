@@ -278,6 +278,8 @@ dirty(:io, load_sound: 1)
 
 spec is_sound_valid(sound :: payload) :: result :: bool
 
+spec unload_sound(sound :: payload) :: :ok :: label
+
 # Wave/Sound management functions
 
 spec play_sound(sound :: payload) :: :ok :: label

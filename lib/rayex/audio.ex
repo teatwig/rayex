@@ -34,6 +34,10 @@ defmodule Rayex.Audio do
   @spec is_sound_valid?(S.Sound.t()) :: boolean()
   defdelegate is_sound_valid?(sound), to: Raylib, as: :is_sound_valid
 
+  @doc "Unload sound"
+  @spec unload_sound(S.Sound.t()) :: :ok
+  defdelegate unload_sound(sound), to: Raylib
+
   # Wave/Sound management functions
 
   @doc "Play a sound"

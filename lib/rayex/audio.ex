@@ -12,6 +12,10 @@ defmodule Rayex.Audio do
   @spec init_audio_device() :: :ok
   defdelegate init_audio_device(), to: Raylib
 
+  @doc "Close the audio device and context"
+  @spec close_audio_device() :: :ok
+  defdelegate close_audio_device(), to: Raylib
+
   @doc "Check if audio device has been initialized successfully"
   @spec is_audio_device_ready?() :: boolean()
   defdelegate is_audio_device_ready?(), to: Raylib, as: :is_audio_device_ready
